@@ -31,8 +31,12 @@ def BatchStringGenerator(n, a=8, b=12):
         r.append(RandomStringGenerator(c))
     return r
 
+
 a = input('Enter minimum string length: ')
 b = input('Enter maximum string length: ')
 n = input('How many random strings to generate? ')
 
-print(BatchStringGenerator(int(n), int(a), int(b)))
+try:
+    print(BatchStringGenerator(int(n), int(a), int(b)))
+except:
+    print('Numbers you entered are not valid numbers')
